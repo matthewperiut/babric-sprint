@@ -1,0 +1,27 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.matthewperiut.babric_sprint.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "plugin": "com.matthewperiut.babric_sprint.mixin.compat.CompatMixinPlugin",
+  "mixins": [
+    "EntityMixin",
+    "LivingEntityMixin",
+    "PlayerEntityMixin"
+  ],
+  "server": [
+    "server.ServerPlayNetworkHandlerMixin"
+  ],
+  "client": [
+    "client.Class413Mixin",
+    "client.Class555Mixin",
+    "client.Class555MixinCaptureVar",
+    "client.ClientPlayerEntityMixin",
+    "client.MultiplayerClientPlayerEntityMixin",
+    "client.PlayerEntityRendererMixin",
+    "client.WorldRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

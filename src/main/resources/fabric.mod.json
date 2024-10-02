@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "babric_sprint",
+  "version": "${version}",
+
+  "name": "Babric Sprint",
+  "description": "Adds sprinting to b1.7.3",
+  "authors": [
+    "Slainlight"
+  ],
+
+  "license": "MIT",
+  "icon": "assets/babric_sprint/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.matthewperiut.babric_sprint.BabricSprint"
+    ],
+    "stationapi:event_bus": [
+    ],
+    "stationapi:event_bus_client": [
+      "com.matthewperiut.babric_sprint.stapi.KeybindListener"
+    ],
+    "stationapi:event_bus_server": [
+    ]
+  },
+  "mixins": [
+    "babric_sprint.mixins.json"
+  ],
+
+  "depends": {
+    "minecraft": "1.0.0-beta.7.3"
+  }
+}
