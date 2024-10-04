@@ -22,10 +22,6 @@ abstract public class LivingEntityMixin extends Entity {
         LivingEntity entity = (LivingEntity) (Object) this;
         if (((EntitySprinting) (Object) entity).isSprinting()) {
 
-            if (!entity.onGround) {
-                return;
-            }
-
             if (Math.sqrt(Math.pow(velocityX, 2) + Math.pow(velocityZ, 2)) < 0.25) {
                 float f = yaw * ((float) Math.PI / 180);
                 this.velocityX -= (double) (MathHelper.sin(f) * 0.035f);
